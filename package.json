@@ -1,0 +1,10 @@
+{
+  "name": "verse-ai",
+  "version": "1.0.0",
+  "description": "AI poem and lyrics assistant (Gemini + Netlify Functions)",
+  "private": true,
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verse — AI Poem & Lyrics Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Verse <span>— AI poem &amp; lyrics assistant</span></h1>
+  <p class="sub">Tell it a theme. Get a poem or song lyrics, then keep refining.</p>
+
+  <div class="card">
+    <div class="seg" id="mode">
+      <button class="on" data-m="poem">Poem</button>
+      <button data-m="lyrics">Song lyrics</button>
+    </div>
+    <label for="topic">What is it about?</label>
+    <textarea id="topic" maxlength="500" placeholder="e.g. missing home during monsoon season, a late-night bus ride, first love…"></textarea>
+    <div class="row">
+      <div><label for="style" id="styleLabel">Poem style</label><select id="style"></select></div>
+      <div><label for="mood">Mood</label>
+        <select id="mood">
+          <option>Wistful</option><option>Joyful</option><option>Melancholic</option><option>Hopeful</option>
+          <option>Romantic</option><option>Angry</option><option>Playful</option><option>Peaceful</option>
+        </select></div>
+    </div>
+    <div class="row">
+      <div><label for="len">Length</label>
+        <select id="len"><option>Short (4–8 lines)</option><option selected>Medium (12–16 lines)</option><option>Long (24+ lines)</option></select></div>
+      <div><label for="lang">Language</label><input id="lang" value="English" maxlength="30"></div>
+    </div>
+    <button class="go" id="go">Write the poem</button>
+    <div class="msg" id="msg" role="status"></div>
+  </div>
+
+  <div class="card" id="out" hidden>
+    <div id="text"></div>
+    <div class="tools" id="tools">
+      <button data-r="Rewrite it with fresher, more original imagery. Keep the theme.">Fresher imagery</button>
+      <button data-r="Make the rhymes tighter and more consistent.">Tighten rhymes</button>
+      <button data-r="Make it more emotional and personal.">More emotional</button>
+      <button data-r="Make it shorter and punchier.">Shorter</button>
+      <button data-r="Continue it with another stanza or verse in the same voice, and return the full updated piece.">Add a stanza</button>
+      <button id="copy">Copy</button>
+    </div>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
